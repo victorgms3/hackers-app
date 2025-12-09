@@ -8,6 +8,10 @@ import { Header } from './component/header/header';
 import { Footer } from './component/footer/footer';
 import { Home } from './component/home/home';
 import { About } from './component/about/about';
+import { HackerForm } from './component/hacker-form/hacker-form';
+import { HackerList } from './component/hacker-list/hacker-list';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,15 @@ import { About } from './component/about/about';
     Header,
     Footer,
     Home,
-    About
+    About,
+    HackerForm,
+    HackerList
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

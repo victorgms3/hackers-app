@@ -40,10 +40,14 @@ export class HackerForm {
     console.log(this.hackerForm.value)
   }
 
-  clear() {
-    this.hackerForm.controls.ip.setValue("103.125.234.210")
-    console.log("cancel")
-    console.log(this.hackerForm.value)
-  }
+  // clear() {
+  //   this.hackerForm.controls.ip.setValue("103.125.234.210")
+  //   console.log("cancel")
+  //   console.log(this.hackerForm.value)
+  // }
 
+  clear() {
+    this.hackerForm.reset();
+    console.log("reset")
+  }
 }

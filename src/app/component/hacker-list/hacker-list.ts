@@ -10,8 +10,11 @@ import { ManagerHacker } from '../../service/manager-hacker';
 })
 export class HackerList {
   hackers: Hacker[] = [];
-  
+
   constructor(private managerHacker: ManagerHacker) {
     this.hackers = this.managerHacker.getAllHackers();
   }
+  editHacker(hacker: Hacker) {
+    this.managerHacker.editHacker(hacker);
+  } 
 }

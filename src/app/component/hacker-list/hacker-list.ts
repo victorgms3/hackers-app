@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Hacker } from '../../model/Hacker';
+import { ManagerHacker } from '../../service/manager-hacker';
 
 @Component({
   selector: 'app-hacker-list',
@@ -7,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './hacker-list.css',
 })
 export class HackerList {
-
+  hackers: Hacker[] = [];
+  
+  constructor(private managerHacker: ManagerHacker) {
+    this.hackers = this.managerHacker.getAllHackers();
+  }
 }
